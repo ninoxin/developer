@@ -42,6 +42,14 @@ body{
     color: #10c9c3;
 }
 /* promo */
+.promo{
+    background:url(../img/promo.jpg) no-repeat left / cover;
+    background-position: 0 0;
+    margin-top: -110px;
+}
+.promo-2{
+    background: #F6F6F6;
+}
 .promo__block{
     padding-top: 171px;
     display: flex;
@@ -114,10 +122,20 @@ body{
 /* skill */
 .skill{
     background: linear-gradient(to right, #f8f9f9 50%, #e9e9e9 50%);
+    display: flex;
+    justify-content:space-between;
+}
+.img-skill-block{
+    width: 50%;
+}
+.skill-img{
+    width: 100%;
+    height: 100%;
 }
 .skill__block{
     padding-top: 165px;
     padding-bottom: 102px;
+    padding-left: 100px;
 }
 .title-skill{
     padding-bottom: 39px;
@@ -280,12 +298,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url(../img/code.jpeg) no-repeat center / 100%;
 }
 .play{
     width: 85px;
     height: 85px;
     background-color: #10c9c3;
     border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.play-span{
+    text-align: center;
+    color: #fff;
+    padding-left: 5px;
+    font-size:30px;
 }
 /* servies */
 .servies{
@@ -331,7 +359,6 @@ body{
     letter-spacing: 0.005em;
     color: #787878;
 }
-
 /* clients */
 .clients__block{
     padding-top: 65px;
@@ -566,7 +593,10 @@ body{
 }
 /* about */
 .about-2{
-    background:#7e7e7e;
+    background:linear-gradient(0deg, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)),url(../img/about.jpg) no-repeat center;
+}
+.skill-2{
+    display: flex;
 }
 .about__block-2 , .text-about-2{
     color: #ffffff;
@@ -610,7 +640,7 @@ body{
     width: 100%;
     padding-top: 43px;
     font-family: 'Nunito Sans' , sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 400;
     letter-spacing: 0.005em;
@@ -625,6 +655,65 @@ body{
 }
 .input-2{
     width: 100%;
+}
+.desc-contact{
+    display: flex;
+    flex-direction: column;
+    padding-top: 36px;
+}
+/* project */
+.project-info{
+    padding-top: 10px;
+    font-size: 18px;
+    color: #787878;
+}
+.project-info-title{
+    color: #000000;
+}
+.slider-2{
+    background:#f7f6f7;
+    position: relative;
+    margin-bottom:70px;
+}
+.slider-2 input[name="switch"] {
+  display: none;
+}
+.switch {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+}
+.switch label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  margin: 0 3px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+  border-radius: 50%;
+  border: 5px solid #2f363c;
+  background-color: #738290;
+}
+#btn1:checked~.switch label[for="btn1"] {
+  background-color: white;
+}
+.slider-inner {
+  overflow: hidden;
+}
+#btn1:checked~slider-inner .slides-2 {
+  transform: translate(0);
+}
+.slider__block{
+    display: flex;
+    justify-content: space-between;
+}
+.desc-slider{
+    padding-top: 100px;
+}
+.sloder-img{
+    width: 50%;
 }
 /* адаптация */
 @media(max-width:1200px){
@@ -763,69 +852,4 @@ body{
     }
 }
 
-/* Собственно сам слайдер */
-.slider{
-    background: linear-gradient(to right, #f8f9f9 50%, #e9e9e9 50%);
-}
-.slider-button{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.block{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 17px;
-    width: 100%;
-}
-.square{
-    margin-bottom:3px;
-    background: #000;
-    width: 7px;
-    height: 7px;
-}
-/* Кнопки вперед и назад */
-.slider .prev, .slider .next {
-    cursor: pointer;
-    bottom:0;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-.slider .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
 
-/* Заголовок слайда */
-.slideText {
-    position: absolute;
-    color: #fff;
-    font-size: 35px;
-    /* Выравнивание текста по горизонтали и по вертикали*/
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Анимация слайдов */
-.slider .item {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
