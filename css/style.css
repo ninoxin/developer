@@ -23,11 +23,17 @@ body{
     justify-content: space-between;
 }
 .nav{
-    max-width: 620px;
+    max-width: 630px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.burger-menu{
+    max-width: 630px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .link-nav{
     text-decoration: none;
@@ -37,6 +43,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: #191919;
+    transition: .3s all;
 }
 .link-nav:hover{
     color: #10c9c3;
@@ -96,6 +103,13 @@ body{
     letter-spacing: 0.1em;
     color: #ffffff;
     background-color: #10c9c3;
+    border: 1px solid #10c9c3;
+    transition: .4s all ;
+}
+.button:hover{
+    background-color: unset;
+    color: #10c9c3;
+    border: 1px solid #10c9c3;
 }
 /* about */
 .about__block{
@@ -210,6 +224,7 @@ body{
 .card{
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 .card-1{
     background: url(../img/portfolio.svg) no-repeat left / 40px;
@@ -337,6 +352,7 @@ body{
     flex-direction: column;
     align-items:center;
     justify-content: center;
+    cursor: pointer;
 }
 .title-card-servies{
     padding-top: 30px;
@@ -475,6 +491,11 @@ body{
     letter-spacing: 0.005em;
     color: #bcbcbc;
 }
+.link-footer:hover{
+    color: #ffffff;
+    font-size: 16px;
+    transition: .3s all;
+}
 /* slider */
 .wrapper{
     background-color: #10c9c3;
@@ -593,7 +614,7 @@ body{
 }
 /* about */
 .about-2{
-    background:linear-gradient(0deg, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)),url(../img/about.jpg) no-repeat center;
+    background:linear-gradient(0deg, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)),url(../img/about.jpg) no-repeat center / cover;
 }
 .skill-2{
     display: flex;
@@ -756,9 +777,28 @@ body{
         padding-left: 20px;
         padding-right: 20px;
     }
-    .nav-header{
-        max-width: 500px;
-        width: 100%;
+    .header__block{
+        align-items: flex-start;
+    }
+    .link-logo{
+        display: none;
+    }
+    .promo{
+        margin-top: 0;
+        background:linear-gradient(0deg, rgba(51, 51, 51, 0.1), rgba(51, 51, 51, 0.7));
+    }
+    .skill__block{
+        display: flex;
+        flex-direction: column;
+    }
+    .skill-2{
+        display: flex;
+        flex-direction: column;
+        background: unset;
+    }
+    .skill__block-2{
+        padding-left: 10px;
+        align-items: center;
     }
     .text-skill:before {
        width: 200px;
@@ -797,6 +837,78 @@ body{
         padding-left: 20px;
         padding-right: 20px;
     }
+    .link-logo{
+        display: block;
+    }
+    .skill{
+        display: flex;
+        flex-direction: column;
+        background:unset;
+    }
+    .img-skill-block{
+        width: 100%;
+        height: 100%;
+    }
+    .skill__block{
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+    .skill-img{
+        width: 100%;
+        height: 100%;
+    }
+    .burger-menu{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background:url(../img/menu.svg) no-repeat center /20px;
+    }
+    .nav-header{
+        display: none;
+    }
+    .nav-header-2{
+        flex-direction:column;
+        align-items: flex-end;
+    }
+    .burger-menu:hover{
+        background:url(../img/cancel.svg) no-repeat top / 20px #10c9c3;
+        background-position-y:10px;
+        min-height: 600px;
+    }
+    .burger-menu:hover > .nav{
+        position: absolute;
+        top: 0px;
+        right:39px;
+        width:400px;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #10c9c3;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+    .link-nav{
+        color: #ffffff;
+        font-size: 20px;
+    }
+    .link-nav:hover{
+        color: #000000;
+    }
+    .desc-slider{
+        padding-top: 30px;
+    }
+    .slider__block{
+        flex-direction: column;
+    }
+    .sloder-img{
+        width: 100%;
+        padding-top: 20px;
+    }
+    .link-nav-2{
+        color: #191919;
+    }
     .nav-header{
         flex-direction: column;
         align-items: flex-end;
@@ -829,12 +941,32 @@ body{
     .card-servies{
         width: 100%;
     }
+    .burger-menu:hover{
+        min-height:500px;
+    }
+    .burger-menu:hover > .nav{
+        position: absolute;
+        top: 0px;
+        right:39px;
+        width:250px;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #10c9c3;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
     .title-slider{
         padding-top: 50px;
         font-size: 20px;
     }
     .slider{
         height: 340px;
+    }
+    .link-nav-2{
+        color: #191919;
     }
     .img-clients{
         width:20%;
